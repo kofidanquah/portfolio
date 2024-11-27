@@ -10,7 +10,8 @@ body {
 .banner {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     height: 80vh;
-    background-color: #3338;
+    background-color: #333;
+    min-height: 100vh;
 }
 
 .banner h1,
@@ -58,6 +59,11 @@ section {
 
 .nav-link:hover {
     color: #007bff;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand.logo img {

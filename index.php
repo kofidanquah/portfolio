@@ -1,20 +1,31 @@
+<?php
+require "config.php";
+
+if (isset($_SESSION['success'])) {
+    echo "<script>alert('Success! Your Message was sent');</script>";
+    unset($_SESSION['success']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
     <title>Kofi Danquah | Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header sticky-top bg-white text-dark">
         <nav class="navbar navbar-expand-lg container">
-            <a href="index.html" class="navbar-brand logo"><img src="images/logo.png" alt="KD"></a>
+            <a href="#" class="navbar-brand logo"><img src="images/logo.png" alt="KD"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +42,7 @@
     </header>
 
     <!-- Banner -->
-    <section class="banner text-center text-light d-flex align-items-center justify-content-center" style="background-color: #333; min-height: 100vh;">
+    <section class="banner text-center text-light d-flex align-items-center justify-content-center">
         <div class="row container">
             <div class="col-12 col-md-7 text-center mb-4 mb-md-0">
                 <h1>HI 👋, I'M KOFI DANQUAH</h1>
@@ -43,7 +54,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Skills -->
     <section id="skill" class="skills py-5">
@@ -110,7 +120,8 @@
                 technical endeavors. Documentation: Delivering clear, concise, and comprehensive technical materials.
             </p>
 
-            <a href="#" class="btn btn-primary">Download Résumé</a>
+            <a href="downloads/kofi_danquah_resume.pdf" target="_blank" class="btn btn-primary">
+                <i class="fa fa-download"></i> Download Résumé</a>
         </div>
     </section>
 
@@ -124,7 +135,7 @@
                         <div class="card-body">
                             <i class="fa fa-code fa-3x"></i>
                             <h5 class="mt-3">Web Development</h5>
-                            <p>Building robust websites tailored to your needs.</p>
+                            <p>Building robust websites tailored to your needs with modern technologies</p>
                         </div>
                     </div>
                 </div>
@@ -246,19 +257,24 @@
     <section id="contact" class="contact py-5">
         <div class="container">
             <h2 class="text-center text-white">SEND A MESSAGE</h2>
-            <form method="POST" action="" class="mx-auto" style="max-width: 600px;">
+            <form method="POST" action="sendEmail.php" id="myform" class="mx-auto" style="max-width: 600px;">
                 <div class="mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
                 </div>
 
                 <div class="mb-3">
-                    <textarea id="message" rows="5" class="form-control" placeholder="Your message"></textarea>
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Send</button>
+
+                <div class="mb-3">
+                    <textarea id="msg" rows="5" class="form-control" name="msg" placeholder="Your message"></textarea>
+                </div>
+
+                <a type="button" onclick="submitForm()" class="btn btn-primary w-100">Send</a>
             </form>
         </div>
     </section>
@@ -272,10 +288,10 @@
             <a href="https://wa.me/+233208595739" class="text-white mx-2" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
             <a href="https://www.twitter.com/kdanquah_" class="text-white mx-2" target="_blank"><i class="fab fa-x-twitter fa-2x "></i></a>
         </div>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
