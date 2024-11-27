@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.banner {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    background-color: #3338;
+}
+
+.banner h1,
+h3 {
+    animation: 3s ease-out 0s 1 slideInLeft;
+}
+
+.banner img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: 2s ease-in-out fadeIn;
+}
+
+.skills .col-md-3:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.services {
+    background-color: #333;
+    /* height: 80vh; */
+}
+
+.projects img {
+    height: 150px;
+    width: auto;
+}
+
+.contact {
+    background-color: #333;
+}
+
+section {
+    scroll-margin-top: 50px;
+}
+
+
+/* Navbar links styling */
+
+.nav-link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-brand.logo img {
+    width: 100px;
+}
+
+.hover-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-card:hover .overlay-text {
+    opacity: 1;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
