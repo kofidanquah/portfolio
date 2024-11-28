@@ -63,7 +63,6 @@ section {
 
 .nav-link.active {
     font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand.logo img {
