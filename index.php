@@ -96,8 +96,8 @@ if (isset($_SESSION['success'])) {
                 </div>
 
                 <div class="col-md-3 col-sm-6 text-center">
-                    <i class="fab fa-java fa-3x" style="color: #f8981d;"></i>
-                    <h5 class="mt-2">Java</h5>
+                    <i class="fab fa-git fa-3x" style="color: #111;"></i>
+                    <h5 class="mt-2">Git</h5>
                 </div>
 
                 <!-- Repeat for other skills -->
