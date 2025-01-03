@@ -1,0 +1,88 @@
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    background-image: url('../images/image1.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.back {
+    color: #111;
+    padding: 15px;
+    border-radius: 100%;
+    border: 1px solid #111;
+}
+
+.blog-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.blog-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-left: 4px solid #0078d7;
+    border-radius: 5px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #0078d7;
+}
+
+.blog-footer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.blog-footer p {
+    font-style: italic;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .blog-content {
+        padding: 1rem;
+    }
+    .blog-header h1 {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
