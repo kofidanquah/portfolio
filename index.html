@@ -289,25 +289,29 @@
     <!-- Contact -->
     <section id="contact" class="contact py-5">
         <div class="container">
-            <h2 class="text-center text-white">SEND ME A MESSAGE</h2>
+            <h2 class="text-center text-white mb-3">Interested in working together? Let's talk</h2>
             <form method="POST" action="https://formspree.io/f/mkgnlwwo" id="myform" class="mx-auto" style="max-width: 600px;">
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" id="name" required placeholder="Your name">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" id="email" required placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <textarea id="msg" rows="5" class="form-control" name="msg" required placeholder="Message"></textarea>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
-                </div>
-
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                </div>
-
-                <div class="mb-3">
-                    <textarea id="msg" rows="5" class="form-control" name="msg" placeholder="Your message"></textarea>
-                </div>
-
-                <a type="button" onclick="submitForm()" class="btn btn-primary w-100">Send</a>
+                <button type="submit" class="btn btn-primary w-100">Send</button>
             </form>
         </div>
     </section>
