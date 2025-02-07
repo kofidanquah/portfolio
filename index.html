@@ -37,12 +37,12 @@
 
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="#skill" class="nav-link">Skills</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <a href="blog.html" class="btn btn-warning">Blog</a>
+            <a href="#skill" class="nav-link mobile-nav">Skills</a>
+            <a href="#about" class="nav-link mobile-nav">About</a>
+            <a href="#services" class="nav-link mobile-nav">Services</a>
+            <a href="#projects" class="nav-link mobile-nav">Projects</a>
+            <a href="#contact" class="nav-link mobile-nav">Contact</a>
+            <a href="blog.html" class="btn btn-warning mobile-nav">Blog</a>
         </div>
     </header>
 
@@ -336,10 +336,19 @@
     // Mobile Menu Toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav'); // Select all mobile links
 
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('show');
     });
+
+    // Close menu when any mobile link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('show');
+        });
+    });
+
 
     // Show the button when the user scrolls down 150px
     window.onscroll = function() {
