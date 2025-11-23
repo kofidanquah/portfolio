@@ -135,6 +135,10 @@ h3 {
     width: auto;
 }
 
+.projects a {
+    text-decoration: none;
+}
+
 .contact {
     background-color: #333;
 }
