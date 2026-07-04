@@ -1,88 +1,70 @@
-.hero {
-    text-align: center;
-    padding: 5rem 1rem;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: #fff;
-    background-image: url('../images/image1.jpg');
-    background-position: cover;
-    background-repeat: no-repeat;
-}
-
-.hero h1 {
-    font-size: 3rem;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-}
-
-.back {
-    color: #111;
-    padding: 15px;
-    border-radius: 100%;
-    border: 1px solid #111;
+.hero.my-journey {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/image1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .blog-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    margin: -60px auto 100px;
+    padding: 48px;
+    background: var(--dark);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 10;
 }
 
 .blog-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 48px;
 }
 
 .blog-header h1 {
+    font-family: 'Syne', sans-serif;
     font-size: 2.5rem;
-    color: #444;
+    font-weight: 800;
+    margin-bottom: 12px;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.1rem;
+    color: var(--muted);
 }
 
 .blog-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-left: 4px solid #0078d7;
-    border-radius: 5px;
+    margin-bottom: 40px;
 }
 
 .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #0078d7;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: var(--violet);
+    border-radius: 4px;
 }
 
 .blog-footer {
-    margin-top: 3rem;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--card-border);
     text-align: center;
 }
 
-.blog-footer p {
-    font-style: italic;
-    color: #555;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .blog-content {
-        padding: 1rem;
-    }
-    .blog-header h1 {
-        font-size: 2rem;
-    }
-    .section-title {
-        font-size: 1.5rem;
+        margin: -40px 20px 60px;
+        padding: 32px 24px;
     }
 }

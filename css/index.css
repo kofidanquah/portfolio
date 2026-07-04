@@ -331,7 +331,7 @@ header {
     position: relative;
     z-index: 1;
     width: 290px;
-    height: 290px;
+    height: 350px;
     /* border-radius: 50%; */
     object-fit: cover;
     border: 4px solid #fff;
@@ -912,6 +912,30 @@ footer {
         opacity: 0.5;
         transform: scale(0.8);
     }
+}
+
+
+/* ── SHARED COMPONENTS ────────────────────────────── */
+
+.hero {
+    text-align: center;
+    padding: 80px 24px;
+    background: linear-gradient(135deg, var(--violet), var(--orange));
+    color: #fff;
+}
+
+.hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 section {
