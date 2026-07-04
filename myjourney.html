@@ -4,27 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Kofi Danquah</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <title>My Journey - Kofi Danquah</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/myjourney.css">
 </head>
 
 <body>
-    <header class="header sticky-top bg-white text-dark text-center">
-        <a href="index.html" class="navbar-brand logo"><img src="images/logo.png" alt="KD"></a>
+    <!-- ── HEADER ── -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="KD" /></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html#skill">Skills</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="blog.html" class="btn-blog">Blog</a>
+            </nav>
+            <div class="menu-btn" id="menu-btn"><i class="fa fa-bars"></i></div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html#skill">Skills</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="blog.html" class="btn-blog">Blog</a>
+        </div>
     </header>
 
-    <section class="hero">
+    <section class="hero my-journey">
         <h1>My Journey as a Software Developer</h1>
-        <!-- <p>Insights, Stories, and Tutorials on Tech and Beyond</p> -->
     </section>
 
     <section class="blog-content">
         <header class="blog-header">
-            <h1>My Journey as a Software Developer</h1>
             <p class="subtitle">A reflection on the milestones, challenges, and lessons learned.</p>
         </header>
 
@@ -76,16 +97,60 @@
     </section>
 
 
-    <footer class="footer bg-dark text-white text-center py-4">
-        <p>&copy; 2024 Kofi Danquah | All Rights Reserved</p>
-        <p><i class="fa fa-envelope"></i> danquahkofi520@gmail.com</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/kofi-oduro-danquah-089a68277/" class="text-white mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/kofidanquah" class="text-white mx-2" target="_blank"><i class="fab fa-github fa-2x "></i></a>
-            <a href="https://wa.me/+233208595739" class="text-white mx-2" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
-            <a href="https://www.twitter.com/kdanquah_" class="text-white mx-2" target="_blank"><i class="fab fa-x-twitter fa-2x "></i></a>
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-email">
+            <i class="fa fa-envelope"></i> danquahkofi520@gmail.com
         </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/kofi-oduro-danquah-089a68277/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/kofidanquah" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/+233208595739" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.twitter.com/kdanquah_" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <p class="footer-copy">
+            &copy; <span id="currentYear"></span> Kofi Danquah &mdash; All Rights Reserved
+        </p>
     </footer>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set current year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        // Mobile Menu
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () =>
+            mobileMenu.classList.toggle("show"),
+        );
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+            link.addEventListener("click", () =>
+                mobileMenu.classList.remove("show"),
+            );
+        });
+
+        // Scroll to top button
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+        window.onscroll = () => {
+            if (document.documentElement.scrollTop > 150) {
+                scrollBtn.classList.add("visible");
+            } else {
+                scrollBtn.classList.remove("visible");
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+    </script>
 </body>
 
 </html>
